@@ -2,6 +2,7 @@
 
 **kcat-go** is a Go rewrite of the [kcat](https://github.com/edenhill/kcat) project (formerly kafkacat).
 It is a generic non-JVM producer and consumer for Apache Kafka, think of it as a netcat for Kafka.
+
 Current version: https://github.com/edenhill/kcat:1.7.0
 
 ## Building
