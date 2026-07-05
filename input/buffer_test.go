@@ -4,8 +4,8 @@ import "testing"
 
 func TestParseDelim(t *testing.T) {
 	tests := []struct {
-		in    string
-		want  string
+		in   string
+		want string
 	}{
 		{"", ""},
 		{"\\n", "\n"},
@@ -30,9 +30,9 @@ func TestParseDelim(t *testing.T) {
 
 func TestIndexBM(t *testing.T) {
 	tests := []struct {
-		hay   []byte
+		hay    []byte
 		needle []byte
-		want  int
+		want   int
 	}{
 		{[]byte("hello world"), []byte("world"), 6},
 		{[]byte("hello world"), []byte("xyz"), -1},
@@ -54,9 +54,9 @@ func TestIndexBM(t *testing.T) {
 
 func TestStrnstr(t *testing.T) {
 	tests := []struct {
-		hay   string
+		hay    string
 		needle string
-		want  int
+		want   int
 	}{
 		{"Sep;Post", "Sep;", 0},
 		{"Sep;", "Sep;", 0},
@@ -77,9 +77,9 @@ func TestStrnstr(t *testing.T) {
 
 func TestIndexSingleByte(t *testing.T) {
 	tests := []struct {
-		hay   []byte
+		hay    []byte
 		needle []byte
-		want  int
+		want   int
 	}{
 		{[]byte("hello\nworld"), []byte{'\n'}, 5},
 		{[]byte("abc"), []byte{','}, -1},

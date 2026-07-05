@@ -7,19 +7,19 @@ import (
 
 // JSONEnvelope is the JSON output format for consumed messages.
 type JSONEnvelope struct {
-	Topic         string                 `json:"topic"`
-	Partition     int32                  `json:"partition"`
-	Offset        int64                  `json:"offset"`
-	TimestampType string                 `json:"tstype,omitempty"`
-	Timestamp     int64                  `json:"ts,omitempty"`
-	Broker        int32                  `json:"broker"`
-	Headers       []json.RawMessage      `json:"headers,omitempty"`
-	Key           json.RawMessage        `json:"key"`
-	Payload       json.RawMessage        `json:"payload"`
-	KeyError      string                 `json:"key_error,omitempty"`
-	PayloadError  string                 `json:"payload_error,omitempty"`
-	KeySchemaID   int                    `json:"key_schema_id,omitempty"`
-	ValueSchemaID int                    `json:"value_schema_id,omitempty"`
+	Topic         string            `json:"topic"`
+	Partition     int32             `json:"partition"`
+	Offset        int64             `json:"offset"`
+	TimestampType string            `json:"tstype,omitempty"`
+	Timestamp     int64             `json:"ts,omitempty"`
+	Broker        int32             `json:"broker"`
+	Headers       []json.RawMessage `json:"headers,omitempty"`
+	Key           json.RawMessage   `json:"key"`
+	Payload       json.RawMessage   `json:"payload"`
+	KeyError      string            `json:"key_error,omitempty"`
+	PayloadError  string            `json:"payload_error,omitempty"`
+	KeySchemaID   int               `json:"key_schema_id,omitempty"`
+	ValueSchemaID int               `json:"value_schema_id,omitempty"`
 }
 
 // MarshalEnvelope marshals a JSON envelope to bytes.
@@ -33,7 +33,7 @@ type MetadataJSON struct {
 		ID   int32  `json:"id"`
 		Name string `json:"name"`
 	} `json:"originating_broker"`
-	ControllerID int32    `json:"controllerid"`
+	ControllerID int32        `json:"controllerid"`
 	Brokers      []BrokerJSON `json:"brokers"`
 	Topics       []TopicJSON  `json:"topics"`
 }
@@ -53,11 +53,11 @@ type TopicJSON struct {
 
 // PartitionJSON represents a partition in metadata JSON.
 type PartitionJSON struct {
-	Partition int32    `json:"partition"`
-	Error     string   `json:"error,omitempty"`
-	Leader    int32    `json:"leader"`
-	Replicas  []int32  `json:"replicas"`
-	ISRs      []int32  `json:"isrs"`
+	Partition int32   `json:"partition"`
+	Error     string  `json:"error,omitempty"`
+	Leader    int32   `json:"leader"`
+	Replicas  []int32 `json:"replicas"`
+	ISRs      []int32 `json:"isrs"`
 }
 
 // MarshalMetadataJSON marshals metadata to JSON bytes.
