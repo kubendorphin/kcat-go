@@ -1,0 +1,44 @@
+# Binaries
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Go
+bin/
+obj/
+
+# Go build output
+*.out
+*.test
+
+# Dependency directories
+vendor/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+.claude/
+
+# Test artifacts
+*.prof
+*.trace
+
+# Go modules
+go.sum
+
+# Build artifacts
+build/
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Dockerfile
+Dockerfile
